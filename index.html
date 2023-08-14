@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <main>
+        <section class="toolbar">
+
+            <p class="logo flex">Project</p>
+            <nav class="nav flex">
+                <div id="webMenu" class="menu">
+                    <p>web</p>
+                    <ul id="webSubMenu"> </ul>
+                </div>
+                <div id="desktopMenu" class="menu">
+                    <p>desktop</p>
+                    <ul id="desktopSubMenu"></ul>
+                </div>
+
+            </nav>
+            <p id="page-name" class="current flex"></p>
+
+        </section>
+
+        <article class="content flex">
+            <div id="asset" class="inner flex"></div>
+            <!-- <div id="video-asset" class="inner flex">
+                <video controls>
+                    <source src="huepicker.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div> -->
+        </article>
+
+        <article class="content flex">
+            <div class="text">
+                <p id="text-content"></p>
+                <p id="links"></p>
+            </div>
+        </article>
+
+        <section class="footer">
+
+            <p class="logo flex">Project</p>
+            <nav class="nav flex">
+                <p>web</p>
+                <p>desktop</p>
+            </nav>
+            <p class="current flex">Facebook</p>
+
+        </section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>

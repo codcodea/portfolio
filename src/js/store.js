@@ -1,0 +1,93 @@
+
+const pageName = document.querySelector("#page-name");
+const textContent = document.querySelector("#text-content");
+const links = document.querySelector("#links");
+
+import initMenuItems from "./initMenu";
+import initMenuEvents from "./menu";
+
+import db from "../db/data";
+
+class Store {
+
+    init = false;
+    menuMap = new Map();
+    page = db[0].name;
+
+    initApp() {
+        if (!this.init) {
+            db.forEach(item => this.menuMap.set(item.id, item.name));  // create menu map 
+            this.initMenu();  // init menu items
+            initMenuEvents();  // init menu events
+            this.init = true;
+            this.setPage(this.page);
+        }
+    }
+
+    setPage(page) {
+        this.page = page;
+        this.clearPage();
+        pageName.innerText = page;
+        textContent.innerText = db.find(item => item.name === page).description;
+        links.innerHTML = this.getLinks(page);
+        this.setAsset(page);
+    }
+
+    clearPage() {
+        pageName.innerText = "";
+        textContent.innerText = "";
+        links.innerHTML = "";
+
+        const imageAsset = document.querySelector("#asset");
+        imageAsset.innerHTML = "";
+    }
+
+    getLinks(page) {
+        const links = db.find(item => item.name === page).links;
+        let html = "";
+        for (const key in links) {
+            html += `<a href="${links[key]}" target="_blank">${key}</a>`;
+        }
+        return html;
+    }
+
+    setAsset(page) {
+        const asset = db.find(item => item.name === page).asset;
+        const imageElement = document.querySelector("#asset");
+    
+        if (asset.includes(".mp4")) {
+
+            // create video element
+            const video = document.createElement("video");
+            video.src = asset;
+            video.autoplay = true;
+            video.playsInline = true;
+            video.controls = true;
+
+            imageElement.appendChild(video);
+    
+        } else {
+            const img = document.createElement("img");
+            img.src = asset;
+            img.alt = page;
+            imageElement.appendChild(img);
+        }
+
+    }
+
+    initMenu() {
+        // set menu items
+        const webMenuItems = db.filter(item => item.category === 'web').map(item => item.name);
+        const desktopMenuItems = db.filter(item => item.category === 'desktop').map(item => item.name);
+
+        const webSubMenu = document.querySelector('#webSubMenu');
+        const desktopSubMenu = document.querySelector('#desktopSubMenu');
+
+        initMenuItems(webMenuItems, webSubMenu);
+        initMenuItems(desktopMenuItems, desktopSubMenu);
+    }
+}
+
+const store = new Store();
+
+export default store;
