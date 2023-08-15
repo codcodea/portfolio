@@ -80,7 +80,7 @@ class Store {
             const img = document.createElement("img");
             img.src = asset;
             img.alt = page;
-            img.onclick = () => window.open(links.web, '_blank');
+            img.onclick = () => window.open(links.website, '_blank');
             imageAsset.appendChild(img);
         }
     }
