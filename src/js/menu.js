@@ -1,9 +1,13 @@
-
 import store from "./store";
+
+// Initialize menu item events and styles
 
 export default function initMenuEvents(){
 
     const menus = document.querySelectorAll('.menu');
+    const logo = document.querySelector('.logo');
+
+    logo.addEventListener('click', () => store.setPage('Responsive'));
 
     menus.forEach(menu => {
         const subMenu = menu.querySelector('ul');
@@ -12,7 +16,7 @@ export default function initMenuEvents(){
         menu.addEventListener('mouseenter', () => subMenu.style.display = 'flex');
         subMenu.addEventListener('mouseenter', () => subMenu.style.display = 'flex');
     
-        // set delay to hide sub menu as there is a gap between menu and sub menu
+        // set delay to hide sub menu (as there is a gap between menu and sub menu)
         menu.addEventListener('mouseleave', () => {
             setTimeout(() => {
                 if (!subMenu.matches(':hover')) {
@@ -44,8 +48,11 @@ export default function initMenuEvents(){
     
         // toggle sub menu when menu is clicked and get the text of the clicked item
         menu.addEventListener('click', (e) => {
-            store.setPage(e.target.innerText);
             subMenu.style.display = subMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        subMenu.addEventListener('click', (e) => {
+            store.setPage(e.target.innerText);
         });
     });
 }

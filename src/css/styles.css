@@ -1,4 +1,4 @@
-@import 'base.css';
+@import './base.css';
 
 .flex {
     display: flex;
@@ -7,28 +7,32 @@
 }
 
 body {
-    background-color: rgb(5, 5, 5);
+  
 }
 
 main {
-    width: 90%;
+    width: 1200px;
+    max-width: 85%;
+    min-height: 100vh;
     margin: 0 auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 section {
     width: 90%;
     padding: 0 3vw;
+
 }
 
 .toolbar {
     width: 100%;
-    height: 90px;
+    height: 70px;
 
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
     background-color: #252525;
     color: #fafafa;
-
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -36,6 +40,7 @@ section {
     text-transform: uppercase;
     justify-content: left;
     font-weight: 700;
+    user-select: none;
 }
 
 .nav {
@@ -45,6 +50,7 @@ section {
     & p {
         margin-right: 2em;
         transition: 0.3s ease-in-out;
+        user-select: none;
     }
 
     & p:hover {
@@ -55,7 +61,7 @@ section {
     .menu {
         position: relative;
         z-index: 3;
-        
+
         & ul {
             position: absolute;
 
@@ -76,9 +82,7 @@ section {
             border-radius: 6px;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
             border: 1px solid #808080;
-            /* opacity: 0; */
-            /* visibility: hidden; */
-            /* transition: 0.3s ease-in-out; */
+
 
             & li {
                 padding: 0.3em 1em;
@@ -94,7 +98,6 @@ section {
                 }
             }
 
-            /* Move the pointer styles to the ul */
             &::before {
                 content: '';
                 position: absolute;
@@ -118,9 +121,6 @@ section {
     justify-content: right;
 }
 
-
-
-
 .content {
     width: 100%;
     background-color: #fafafa;
@@ -128,7 +128,7 @@ section {
 
     .inner {
         width: 90%;
-        margin: 5vh auto;
+        margin-top: 5vh;
         padding: 2em 0;
 
         /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); */
@@ -139,20 +139,27 @@ section {
         width: 90%;
         object-fit: cover;
         border-radius: 6px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        transition: scale 0.3s ease-in-out;
+
+        &:hover {
+            scale: 1.03;
+        }
     }
 
-
     .text {
-        width: 90%;
+
+        width: 800px;
+        max-width: 80%;
+        margin-top: 3vh;
         margin-bottom: 5vh;
-        padding: 2em 0;
 
         /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); */
         border-radius: 8px;
         text-align: center;
 
         & p {
-            padding: 1vh 8vw;
+            padding: 0 2vh 3vh 2vh;
         }
 
     }
@@ -160,16 +167,72 @@ section {
 
 .footer {
     width: 100%;
-    height: 290px;
+    height: 150px;
 
-    display: grid;
-    grid-template: 1fr / 1fr 1fr 1fr;
     background-color: #252525;
-    color: #fafafa;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
+    & p {
+        color: #fafafa;
+        font-size: 13px;
+    }
 }
 
 video {
-   width: 95%;
+    width: 95%;
 }
 
+@media screen and (max-width: 768px) {
+    main {
+        max-width: 100%;
+    }
+
+    .toolbar {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+
+        .logo {
+            display: none;
+
+        }
+
+        .nav {
+            grid-column: 1;
+            padding-left: 1.7em;
+        }
+
+        .current {
+            grid-column: 2;
+            padding-right: 1.5em;
+        }
+
+    }
+
+    .content {
+
+        .text {
+            max-width: 80%;
+
+            margin-top: 2vh;
+            margin-bottom: 5vh;
+            font-size: 14px;
+
+            & p {
+                padding: 0 0 3vh 0;
+            }
+
+        }
+
+        & img {
+
+            &:hover {
+                scale: 1.04;
+            }
+        }
+    }
+
+    .footer {
+        height: 150px;
+    }
+
+}

@@ -1,12 +1,19 @@
-
+// DOM references
 const pageName = document.querySelector("#page-name");
 const textContent = document.querySelector("#text-content");
 const links = document.querySelector("#links");
+const imageAsset = document.querySelector("#asset");
 
+// Helper functions
 import initMenuItems from "./initMenu";
 import initMenuEvents from "./menu";
 
+// Databse
 import db from "../db/data";
+
+/**
+ * Store class to manage the state of the application
+ */
 
 class Store {
 
@@ -16,9 +23,9 @@ class Store {
 
     initApp() {
         if (!this.init) {
-            db.forEach(item => this.menuMap.set(item.id, item.name));  // create menu map 
-            this.initMenu();  // init menu items
-            initMenuEvents();  // init menu events
+            db.forEach(item => this.menuMap.set(item.id, item.name));   // create menu map 
+            this.initMenu();                                            // init menu items
+            initMenuEvents();                                           // init menu events
             this.init = true;
             this.setPage(this.page);
         }
@@ -37,42 +44,45 @@ class Store {
         pageName.innerText = "";
         textContent.innerText = "";
         links.innerHTML = "";
-
-        const imageAsset = document.querySelector("#asset");
         imageAsset.innerHTML = "";
     }
 
     getLinks(page) {
         const links = db.find(item => item.name === page).links;
-        let html = "";
+        const numberOfKeys = Object.keys(links).length;
+    
+        let html = '';
+        let counter = 0;
+    
         for (const key in links) {
             html += `<a href="${links[key]}" target="_blank">${key}</a>`;
+            if (counter < numberOfKeys - 1) {
+                html += " | ";
+            }
+            counter++;
         }
         return html;
     }
 
     setAsset(page) {
-        const asset = db.find(item => item.name === page).asset;
-        const imageElement = document.querySelector("#asset");
-    
-        if (asset.includes(".mp4")) {
 
-            // create video element
+        const {asset, links} = db.find(item => item.name === page);
+     
+        if (asset.includes(".mp4")) {
             const video = document.createElement("video");
             video.src = asset;
             video.autoplay = true;
             video.playsInline = true;
             video.controls = true;
-
-            imageElement.appendChild(video);
+            imageAsset.appendChild(video);
     
         } else {
             const img = document.createElement("img");
             img.src = asset;
             img.alt = page;
-            imageElement.appendChild(img);
+            img.onclick = () => window.open(links.web, '_blank');
+            imageAsset.appendChild(img);
         }
-
     }
 
     initMenu() {

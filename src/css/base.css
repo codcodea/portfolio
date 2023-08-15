@@ -1,20 +1,41 @@
-
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     letter-spacing: 0.05em;
     line-height: 1.5;
-    text-rendering: geometricPrecision;
+    text-rendering: optimizeLegibility;
 }
 
 ul {
     list-style: none;
+    user-select: none;
+    -webkit-user-select: none; 
+
+    & li {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        user-select: none;
+        -webkit-user-select: none; 
+    }
 }
 
-li {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:link,
+    &:visited,
+    &:active {
+        color: inherit;
+
+    }
+
+    &:hover {
+        color: rgb(223, 52, 52);
+        scale: 1.04;
+    }
 }
+
