@@ -65,7 +65,6 @@ class Store {
     }
 
     setAsset(page) {
-
         const {asset, links} = db.find(item => item.name === page);
      
         if (asset.includes(".mp4")) {

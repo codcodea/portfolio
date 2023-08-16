@@ -8,6 +8,17 @@
     text-rendering: optimizeLegibility;
 }
 
+:root {
+    --licorice: #1B1212;
+    --gray: #6b6b6b;
+    --text-dark: #252525;
+    --text-light: #fafafa;
+    --bg: #f2f1f0;
+    --shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    --li-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
+    --red: rgb(223, 52, 52);
+}
+
 ul {
     list-style: none;
     user-select: none;
@@ -30,12 +41,17 @@ a {
     &:visited,
     &:active {
         color: inherit;
-
     }
 
     &:hover {
-        color: rgb(223, 52, 52);
+        color: var(-red);
         scale: 1.04;
     }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

@@ -1,4 +1,3 @@
-
 import store from './js/store.js';
 
 document.addEventListener('DOMContentLoaded', () => {
