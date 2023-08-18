@@ -52,7 +52,7 @@ const db = [
         links: {
             website: 'https://store.fiveby7.com/',
         },
-        asset: 'sneaker.png',
+        asset: 'sneaker.webp',
     },
     {
         id: 6,
