@@ -19,7 +19,7 @@ class Store {
 
     init = false;
     menuMap = new Map();
-    page = db[0].name;
+    page = db[1].name;
 
     initApp() {
         if (!this.init) {

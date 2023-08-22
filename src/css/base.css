@@ -9,7 +9,7 @@
 }
 
 :root {
-    --licorice: #1B1212;
+    --licorice: #161616;
     --gray: #6b6b6b;
     --text-dark: #252525;
     --text-light: #fafafa;
@@ -47,6 +47,9 @@ a {
         color: var(-red);
         scale: 1.04;
     }
+
+   font-weight: bold;
+   font-size: 15px;
 }
 
 .flex {
