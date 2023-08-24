@@ -58,3 +58,8 @@ a {
     align-items: center;
 }
 
+button {
+    outline: none;
+    margin: 0 0.5em;
+}
+

@@ -36,7 +36,7 @@ class Store {
         this.clearPage();
         pageName.innerText = page;
         textContent.innerText = db.find(item => item.name === page).description;
-        links.innerHTML = this.getLinks(page);
+        links.appendChild(this.getLinks(page));
         this.setAsset(page);
     }
 
@@ -49,19 +49,15 @@ class Store {
 
     getLinks(page) {
         const links = db.find(item => item.name === page).links;
-        const numberOfKeys = Object.keys(links).length;
-    
-        let html = '';
-        let counter = 0;
+        const div = document.createElement("div");
     
         for (const key in links) {
-            html += `<a href="${links[key]}" target="_blank">${key}</a>`;
-            if (counter < numberOfKeys - 1) {
-                html += " | ";
-            }
-            counter++;
+            const button = document.createElement("button");
+            button.innerText = key;
+            button.onclick = () => window.open(links[key], '_self');
+            div.appendChild(button);
         }
-        return html;
+        return div;
     }
 
     setAsset(page) {
