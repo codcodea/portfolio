@@ -75,7 +75,7 @@ class Store {
             const img = document.createElement("img");
             img.src = asset;
             img.alt = page;
-            img.onclick = () => window.open(links.website, '_blank');
+            img.onclick = () => window.open(links.website, '_self');
             imageAsset.appendChild(img);
         }
     }
