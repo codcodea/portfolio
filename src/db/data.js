@@ -8,7 +8,7 @@ const db = [
         links: {
             github: 'https://github.com/codcodea/responsive',
             mozilla: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_components',
-            website: 'https://web.webben.dev',
+            website: 'https://app.vildawebben.dev/',
         },
         asset: 'responsive.png',
     },
