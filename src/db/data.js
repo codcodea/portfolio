@@ -26,10 +26,10 @@ const db = [
     {
         id: 3,
         category: 'web',
-        name: 'Huepicker.com',
-        description: "Huepicker is a color tool used for design inspiration and sophisticated color tasks in standard industry color spaces like Pantone, RAL, and NCS. It's accessible on the web (Chrome browser) and as a Photoshop plugin. \n\n Frontend Parcel.js. Backend Express.js API. Photoshop UXP.",
+        name: 'MyColorPicker.com',
+        description: "MyColorPicker.com is a color tool designed for inspiration. Pick a color to discover Pantone, RAL, NCS matches, and find color names from over 40,000 color records. Also availible as a Photoshop plugin. \n\n Frontend Parcel.js. Backend Express.js API. Photoshop UXP.",
         links: {
-            website: 'https://huepicker.com/',
+            website: 'https://mycolorpicker.com/',
         },
         asset: 'huepicker.mp4',
     },
@@ -37,10 +37,10 @@ const db = [
         id: 4,
         category: 'web',
         name: 'iReggae Chat',
-        description: 'The iReggae Chat is an application built on Express.js and Socket.io. It is a fully responsive application that allows users to chat with each other in real-time.',
+        description: 'The iReggae Chat is an application built on Express.js and Socket.io, allowing users to chat with each other in real-time.',
         links: {
             github: 'https://github.com/codcodea/iReggae',
-            website: 'https://api.fiveby7.com/chat/register/',
+            website: 'https://api.webben.dev/chat/register/',
         },
         asset: 'reggae.mp4',
     },
@@ -48,9 +48,9 @@ const db = [
         id: 5,
         category: 'web',
         name: 'Sneaker store',
-        description: "Sneaker Store is a fully responsive prototype e-commerce website, inviting users to explore a range of sneakers. \n\n Frontend Next.js 12 and Tailwind. Backend Express.js server with session management, authentication, and database management.",
+        description: "Sneaker Store is a responsive prototype e-commerce website, inviting users to explore a range of sneakers. \n\n Frontend Next.js 12 and Tailwind. Backend Express.js server with session management, authentication, and database management.",
         links: {
-            website: 'https://store.fiveby7.com/',
+            website: 'https://sneaker-front.vercel.app/',
         },
         asset: 'sneaker.webp',
     },
@@ -58,7 +58,7 @@ const db = [
         id: 6,
         category: 'desktop',
         name: 'Table JavaFX',
-        description: "This is a preview of the Table desktop application – a solution designed for loading, storing, and matching image layouts, catering specifically to magazines and photo books. Table aims to simulate the process of small print matching in a clean and minimalistic interface recreating the familiar feel of a kitchen table. \n\n  The application is built using Java 17 and JavaFX ensuring compatibility across Windows, Mac, and Linux platforms.",
+        description: "This is a preview of the Table desktop application – a solution designed for loading, storing, and matching image layouts for magazines and photo books.\n\n  The application is built using Java 17 and JavaFX ensuring compatibility across Windows, Mac, and Linux platforms.",
         links: {},
         asset: 'table.mp4',
     },
@@ -66,9 +66,19 @@ const db = [
         id: 7,
         category: 'desktop',
         name: 'Today Electron.js',
-        description: "Today is a small and delightful to-do application that showcases the capabilities of JavaScript for desktop use. It serves as a convenient organizer and task manager. \n\n  The application is built using Electron.js, ensuring compatibility across Windows, Mac, and Linux platforms.",
+        description: "Today is a to-do application that showcases the capabilities of JavaScript for desktop use. The application is built using Electron.js, ensuring compatibility across Windows, Mac, and Linux platforms.",
         links: {},
         asset: 'today.mp4',
+    },
+    {
+        id: 8,
+        category: 'web',
+        name: 'CMS website',
+        description: "WiMats.se is website for a local company. It is built using Wordpress and Elementor allowing the client to easily update and manage the content.",
+        links: {
+            website: 'https://wimats.se/',
+        },
+        asset: 'mats2.jpg',
     },
 ];
 
