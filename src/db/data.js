@@ -80,6 +80,16 @@ const db = [
         },
         asset: 'mats2.jpg',
     },
+    {
+        id: 9,
+        category: 'web',
+        name: 'Banksy',
+        description: "This website is dedicated to the artist Banksy. It is built with vanilla JavaScript and CSS, and it is fully responsive.",
+        links: {
+            website: 'https://codcodea.github.io/hkr-1',
+        },
+        asset: 'banksy.png',
+    },
 ];
 
 export default db;
