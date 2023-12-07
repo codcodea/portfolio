@@ -20,6 +20,7 @@ const db = [
         name: 'Banksy',
         description: "This website is dedicated to the artist Banksy. \nVanilla JavaScript and CSS.",
         links: {
+            github: "https://github.com/codcodea/hkr-1",
             website: 'https://codcodea.github.io/hkr-1',
         },
         asset: 'banksy_md.jpg',
