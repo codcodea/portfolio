@@ -45,7 +45,7 @@ const db = [
         id: 3,
         category: 'web',
         name: 'MyColorPicker.com',
-        description: "MyColorPicker.com is a color tool designed for inspiration. Pick a color to discover industry standard colors and names from over 40,000 records. This tool is also availible as a Photoshop plugin. \n\n Frontend Parcel.js. Backend Express.js API. Photoshop UXP.",
+        description: "MyColorPicker.com (on Vite.js) is powered by a high-performance server written in Go.",
         links: {
             website: 'https://mycolorpicker.com/',
         },
