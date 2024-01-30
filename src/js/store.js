@@ -34,7 +34,6 @@ class Store {
         this.clearPage();
 		const transition = () => {
 			this.page = page;
-            
 			pageName.innerText = page;
 			textContent.innerText = db.find((item) => item.name === page).description;
 			links.appendChild(this.getLinks(page));

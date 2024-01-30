@@ -2,7 +2,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    font-family: 'Trebuchet MS', sans-serif;
+    /* font-family: 'Trebuchet MS', sans-serif; */
+    font-family: 'EB Garamond', serif;
+    font-family: Baskerville, Georgia, serif;
     font-weight: 300;
     letter-spacing: 0.05em;
     line-height: 1.5;
@@ -19,6 +21,7 @@
     --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     --li-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
     --red: rgb(223, 52, 52);
+    --border-radius: 6px;
 }
 
 ul {

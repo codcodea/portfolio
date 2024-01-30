@@ -14,7 +14,7 @@ const db = [
         id: 2,
         category: 'web',
         name: 'Audiophile',
-        description: "Audiophile is as responsive prototype e-commerce website. \nNext.js 13.4, SCSS, and Typescript.",
+        description: "Audiophile is as responsive prototype e-commerce website written in Next.js 13.4, SCSS, and Typescript.",
         links: {
             github: 'https://github.com/codcodea/audiophile',
             website: 'https://audiophile-6z8v.vercel.app/',
