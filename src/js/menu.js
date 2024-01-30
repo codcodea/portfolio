@@ -48,7 +48,14 @@ export default function initMenuEvents() {
 		// toggle sub menu when menu is clicked and get the text of the clicked item
 		menu.addEventListener("click", (e) => {
 			subMenu.style.display = subMenu.style.display === "flex" ? "none" : "flex";
+            // const el = document.querySelector(".site-wrapper");
+            // el.style.rotate = `${randomBetween(0, 2)}deg`;
 		});
+
+        //random number between -3 and 3
+        // function randomBetween(min, max) {  
+        //     return Math.random() * (max - min) + min; 
+        // }
 
 		subMenu.addEventListener("click", (e) => {
 			store.setPage(e.target.innerText);

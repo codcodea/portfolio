@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     font-weight: 300;
     letter-spacing: 0.05em;
     line-height: 1.5;
@@ -10,11 +11,12 @@
 
 :root {
     --licorice: #161616;
-    --gray: #6b6b6b;
+    --gray: #c4c4c4;
     --text-dark: #252525;
-    --text-light: #fafafa;
-    --bg: #f2f1f0;
+    --text-light: #fefcfc;
+    --bg: #f7f5f3;
     --shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     --li-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
     --red: rgb(223, 52, 52);
 }

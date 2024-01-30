@@ -1,6 +1,15 @@
 
 const db = [
-
+    {
+        id: 3,
+        category: 'web',
+        name: 'MyColorPicker.com',
+        description: "MyColorPicker.com is powered by a high-performance server written in Go and htmx.",
+        links: {
+            website: 'https://mycolorpicker.com/',
+        },
+        asset: 'huepicker.mp4',
+    },
     {
         id: 2,
         category: 'web',
@@ -41,17 +50,6 @@ const db = [
         width: 1571,
         height: 878,
     },
-    {
-        id: 3,
-        category: 'web',
-        name: 'MyColorPicker.com',
-        description: "MyColorPicker.com (on Vite.js) is powered by a high-performance server written in Go.",
-        links: {
-            website: 'https://mycolorpicker.com/',
-        },
-        asset: 'huepicker.mp4',
-    },
-
     {
         id: 5,
         category: 'web',
