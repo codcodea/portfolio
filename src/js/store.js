@@ -81,6 +81,7 @@ class Store {
 			video.autoplay = true;
 			video.playsInline = true;
 			video.controls = true;
+            video.volume = 0;
 			imageAsset.appendChild(video);
 		} else {
 			const img = document.createElement("img");
