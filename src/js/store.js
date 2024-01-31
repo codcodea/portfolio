@@ -29,21 +29,20 @@ class Store {
 	}
 
 	setPage(page) {
-
-        if (page == this.page) {
-            return
-        }
+		if (page == this.page) {
+			return;
+		}
 
 		const transform = () => {
-            this.clearPage();
+			this.clearPage();
 			pageName.innerText = page;
 			textContent.innerText = db.find((item) => item.name === page).description;
 			links.appendChild(this.getLinks(page));
 			this.setAsset(page);
 		};
-        
+
 		if (!document.startViewTransition) return transform();
-	    document.startViewTransition(() => transform())
+		document.startViewTransition(transform);
 	}
 
 	clearPage() {
@@ -85,7 +84,7 @@ class Store {
 			imageAsset.appendChild(img);
 		}
 
-        this.page = page;
+		this.page = page;
 	}
 
 	initMenu() {

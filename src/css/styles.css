@@ -148,6 +148,7 @@ section {
 		margin: 0 auto;
         
 		.inner {
+            min-height: 70%;
 			width: 80%;
 			margin-top: 5vh;
 			padding: 2em 0;
@@ -166,6 +167,7 @@ section {
 		}
 
 		.text {
+            min-height: 30%;
 			width: 900px;
 			max-width: 70%;
 			margin-top: 3vh;
