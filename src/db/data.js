@@ -27,7 +27,7 @@ const db = [
         id: 4,
         category: 'web',
         name: 'Banksy',
-        description: "This website is dedicated to the artist Banksy. \nVanilla JavaScript and CSS.",
+        description: "This website is dedicated to the artist Banksy written in vanilla JavaScript and CSS.",
         links: {
             github: "https://github.com/codcodea/hkr-1",
             website: 'https://codcodea.github.io/hkr-1',
@@ -40,7 +40,7 @@ const db = [
         id: 1,
         category: 'web',
         name: 'Responsive',
-        description: 'This is a component library built with Web Components API. The purpose is to explore how they compare to popular front-end frameworks like React, Angular, and Vue.',
+        description: 'This is a component library written in JavaScript Web Components API.',
         links: {
             github: 'https://github.com/codcodea/responsive',
             mozilla: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_components',
@@ -54,7 +54,7 @@ const db = [
         id: 5,
         category: 'web',
         name: 'Sneaker store',
-        description: "Sneaker Store is a responsive prototype e-commerce website. \n Frontend Next.js 12 and Tailwind. Backend Express.js server with session-, authentication-, and database management.",
+        description: "Sneaker Store is a responsive prototype e-commerce website written in Next.js 12, Tailwind and Express.js with session-, authentication-, and database support.",
         links: {
             website: 'https://sneaker-front.vercel.app/',
         },

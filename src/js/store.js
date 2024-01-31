@@ -17,39 +17,33 @@ import db from "../db/data";
 
 class Store {
 	init = false;
-	menuMap = new Map();
-	page = db[1].name;
+	menu = new Map();
+	page = null;
 
 	initApp() {
-		if (!this.init) {
-			db.forEach((item) => this.menuMap.set(item.id, item.name)); // create menu map
-			this.initMenu(); // init menu items
-			initMenuEvents(); // init menu events
-			this.init = true;
-			this.setPage(this.page);
-		}
+		db.forEach((item) => this.menu.set(item.id, item.name));
+		this.initMenu();
+		initMenuEvents();
+		this.init = true;
+		this.setPage(db[0].name);
 	}
 
 	setPage(page) {
-        this.clearPage();
-		const transition = () => {
-			this.page = page;
+
+        if (page == this.page) {
+            return
+        }
+
+		const transform = () => {
+            this.clearPage();
 			pageName.innerText = page;
 			textContent.innerText = db.find((item) => item.name === page).description;
 			links.appendChild(this.getLinks(page));
-            this.setAsset(page);
-           
+			this.setAsset(page);
 		};
-
-        if (!document.isViewTransitioning) {
-            transition();
-           
-        } else {
-            document.onViewTransitionEnd = () => {
-                transition();
-                document.onViewTransitionEnd = null;
-            };
-        }
+        
+		if (!document.startViewTransition) return transform();
+	    document.startViewTransition(() => transform())
 	}
 
 	clearPage() {
@@ -81,7 +75,7 @@ class Store {
 			video.autoplay = true;
 			video.playsInline = true;
 			video.controls = true;
-            video.volume = 0;
+			video.volume = 0;
 			imageAsset.appendChild(video);
 		} else {
 			const img = document.createElement("img");
@@ -90,10 +84,11 @@ class Store {
 			img.onclick = () => window.open(links.website, "_self");
 			imageAsset.appendChild(img);
 		}
+
+        this.page = page;
 	}
 
 	initMenu() {
-		// set menu items
 		const webMenuItems = db.filter((item) => item.category === "web").map((item) => item.name);
 		const desktopMenuItems = db.filter((item) => item.category === "desktop").map((item) => item.name);
 
