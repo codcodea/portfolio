@@ -97,7 +97,7 @@ const db = [
         description: 'The iReggae Chat is an application built on Express.js and Socket.io, allowing users to chat with each other in real-time.',
         links: {
             github: 'https://github.com/codcodea/iReggae',
-            website: 'https://api.webben.dev/chat/register/',
+            website: 'https://api.vildawebben.dev/chat/register/',
         },
         asset: 'reggae.mp4',
     },
